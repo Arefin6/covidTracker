@@ -9,6 +9,7 @@ const Chart = () => {
   const [dailyData,setDailyData] = useState([]) 
 
   useEffect(()=>{
+    
      const fetchData = async() =>{
       try {
         const {data} = await axios.get(url);
