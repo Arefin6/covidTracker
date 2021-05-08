@@ -13,7 +13,7 @@ function App() {
 
   const handleCountryChange = async(country) =>{
     const data = await fetchData(country)
-    
+    setCountry(country) 
   }
 
   const fetchData = async(country) =>{
@@ -39,7 +39,7 @@ function App() {
     <div className="container">
        <Cards data={cardData}></Cards>
        <CountryPicker handleCountryChange={handleCountryChange}></CountryPicker>
-       <Chart></Chart>     
+       <Chart data={cardData} country={country}></Chart>     
     </div>
   );
 }
